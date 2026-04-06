@@ -1,130 +1,129 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
 	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1 /* BlueAIApp.swift */ = {isa = PBXBuildFile; fileRef = B1; };
-		A2 /* ContentView.swift */ = {isa = PBXBuildFile; fileRef = B2; };
-		A3 /* HomeView.swift */ = {isa = PBXBuildFile; fileRef = B3; };
-		A4 /* AssistantView.swift */ = {isa = PBXBuildFile; fileRef = B4; };
-		A5 /* SettingsView.swift */ = {isa = PBXBuildFile; fileRef = B5; };
-		A6 /* Theme.swift */ = {isa = PBXBuildFile; fileRef = B6; };
+		1 /* BlueAIApp.swift */ = {isa = PBXBuildFile; fileRef = 11; };
+		2 /* ContentView.swift */ = {isa = PBXBuildFile; fileRef = 12; };
+		3 /* HomeView.swift */ = {isa = PBXBuildFile; fileRef = 13; };
+		4 /* AssistantView.swift */ = {isa = PBXBuildFile; fileRef = 14; };
+		5 /* SettingsView.swift */ = {isa = PBXBuildFile; fileRef = 15; };
+		6 /* Theme.swift */ = {isa = PBXBuildFile; fileRef = 16; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B0 /* BlueAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = BlueAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1 /* BlueAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/BlueAIApp.swift; sourceTree = SOURCE_ROOT; };
-		B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/ContentView.swift; sourceTree = SOURCE_ROOT; };
-		B3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/HomeView.swift; sourceTree = SOURCE_ROOT; };
-		B4 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/AssistantView.swift; sourceTree = SOURCE_ROOT; };
-		B5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/SettingsView.swift; sourceTree = SOURCE_ROOT; };
-		B6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/Theme.swift; sourceTree = SOURCE_ROOT; };
-		B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BlueAI/Info.plist; sourceTree = SOURCE_ROOT; };
+		10 /* BlueAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = BlueAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11 /* BlueAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/BlueAIApp.swift; sourceTree = SOURCE_ROOT; };
+		12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/ContentView.swift; sourceTree = SOURCE_ROOT; };
+		13 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		14 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/AssistantView.swift; sourceTree = SOURCE_ROOT; };
+		15 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		16 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/Theme.swift; sourceTree = SOURCE_ROOT; };
+		17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BlueAI/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		G0 = {
+		20 = {
 			isa = PBXGroup;
 			children = (
-				G1,
-				G2,
+				21,
+				22,
 			);
 			sourceTree = "<group>";
 		};
-		G1 = {
+		21 = {
 			isa = PBXGroup;
 			name = BlueAI;
 			children = (
-				B1,
-				B2,
-				B3,
-				B4,
-				B5,
-				B6,
-				B7,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
 			);
 			sourceTree = "<group>";
 		};
-		G2 = {
+		22 = {
 			isa = PBXGroup;
 			name = Products;
 			children = (
-				B0,
+				10,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXSourcesBuildPhase section */
-		S0 = {
+		30 = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				A1,
-				A2,
-				A3,
-				A4,
-				A5,
-				A6,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F0 = {
+		31 = {
 			isa = PBXFrameworksBuildPhase;
 			files = ();
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
-		R0 = {
+		32 = {
 			isa = PBXResourcesBuildPhase;
 			files = ();
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		T0 = {
+		40 = {
 			isa = PBXNativeTarget;
 			name = BlueAI;
 			productName = BlueAI;
-			productReference = B0;
+			productReference = 10;
 			productType = "com.apple.product-type.application";
 			buildPhases = (
-				S0,
-				F0,
-				R0,
+				30,
+				31,
+				32,
 			);
-			buildConfigurationList = C2;
+			buildConfigurationList = 50;
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		P0 = {
+		41 = {
 			isa = PBXProject;
-			mainGroup = G0;
-			productRefGroup = G2;
+			mainGroup = 20;
+			productRefGroup = 22;
 			targets = (
-				T0,
+				40,
 			);
-			buildConfigurationList = C1;
+			buildConfigurationList = 51;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
-		C1D = {
+		60 = {
 			isa = XCBuildConfiguration;
 			name = Debug;
 			buildSettings = {
 				SDKROOT = iphoneos;
 			};
 		};
-		C1R = {
+		61 = {
 			isa = XCBuildConfiguration;
 			name = Release;
 			buildSettings = {
@@ -132,7 +131,7 @@
 			};
 		};
 
-		C2D = {
+		62 = {
 			isa = XCBuildConfiguration;
 			name = Debug;
 			buildSettings = {
@@ -146,7 +145,7 @@
 			};
 		};
 
-		C2R = {
+		63 = {
 			isa = XCBuildConfiguration;
 			name = Release;
 			buildSettings = {
@@ -162,24 +161,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1 = {
+		50 = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1D,
-				C1R,
+				62,
+				63,
 			);
 			defaultConfigurationName = Release;
 		};
-		C2 = {
+		51 = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2D,
-				C2R,
+				60,
+				61,
 			);
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 	};
-	rootObject = P0;
+	rootObject = 41;
 }
