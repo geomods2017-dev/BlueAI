@@ -1,41 +1,30 @@
 import SwiftUI
-import UIKit
 
-struct ContentView: View {
-    init() {
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(BlueAITheme.tabBarBackground)
-        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.white.withAlphaComponent(0.55)
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
-            .foregroundColor: UIColor.white.withAlphaComponent(0.55)
-        ]
-        appearance.stackedLayoutAppearance.selected.iconColor = UIColor(BlueAITheme.accent)
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
-            .foregroundColor: UIColor(BlueAITheme.accent)
-        ]
+enum BlueAITheme {
+    static let backgroundTop = Color(red: 2/255, green: 6/255, blue: 16/255)
+    static let backgroundMid = Color(red: 6/255, green: 14/255, blue: 28/255)
+    static let backgroundBottom = Color(red: 10/255, green: 24/255, blue: 46/255)
 
-        UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().scrollEdgeAppearance = appearance
+    static let cardBackground = Color.white.opacity(0.06)
+    static let cardBorder = Color.white.opacity(0.08)
+
+    static let primaryText = Color.white
+    static let secondaryText = Color.white.opacity(0.72)
+    static let mutedText = Color.white.opacity(0.48)
+
+    static let accent = Color(red: 0.18, green: 0.64, blue: 1.00)
+
+    static var accentSoft: Color {
+        accent.opacity(0.16)
     }
 
-    var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
+    static let tabBarBackground = Color(red: 4/255, green: 10/255, blue: 20/255)
 
-            AssistantView()
-                .tabItem {
-                    Label("Assistant", systemImage: "sparkles")
-                }
-
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }
-        }
-        .preferredColorScheme(.dark)
+    static var appBackground: LinearGradient {
+        LinearGradient(
+            colors: [backgroundTop, backgroundMid, backgroundBottom],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
     }
 }
