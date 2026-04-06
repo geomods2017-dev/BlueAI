@@ -1,39 +1,50 @@
 workflows:
-  ios-simulator:
-    name: BlueAI Simulator Build
+  ios-testflight:
+    name: BlueAI TestFlight
     instance_type: mac_mini_m2
     max_build_duration: 60
 
     environment:
       xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.geomods2017.blueai
       vars:
         XCODE_PROJECT: "BlueAI.xcodeproj"
         XCODE_SCHEME: "BlueAI"
+
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+
+    integrations:
+      app_store_connect: BluePD
 
     scripts:
       - name: Show Xcode version
         script: |
           xcodebuild -version
 
-      - name: Clean build
+      - name: Apply signing profiles
         script: |
-          xcodebuild clean \
-            -project "$XCODE_PROJECT" \
-            -scheme "$XCODE_SCHEME"
+          xcode-project use-profiles --project "$XCODE_PROJECT"
 
-      - name: Build for simulator (NO signing needed)
+      - name: Build IPA
         script: |
-          xcodebuild build \
-            -project "$XCODE_PROJECT" \
-            -scheme "$XCODE_SCHEME" \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro Max,OS=latest' \
-            -configuration Debug \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO
+          xcode-project build-ipa \
+            --project "$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
 
     artifacts:
+      - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
