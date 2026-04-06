@@ -13,6 +13,7 @@
 		A10000010000000000000004 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000010000000000000014 /* AssistantView.swift */; };
 		A10000010000000000000005 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000010000000000000015 /* SettingsView.swift */; };
 		A10000010000000000000006 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000010000000000000016 /* Theme.swift */; };
+		A10000010000000000000007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000010000000000000018 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A10000010000000000000015 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/SettingsView.swift; sourceTree = SOURCE_ROOT; };
 		A10000010000000000000016 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAI/Theme.swift; sourceTree = SOURCE_ROOT; };
 		A10000010000000000000017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BlueAI/Info.plist; sourceTree = SOURCE_ROOT; };
+		A10000010000000000000018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BlueAI/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				A10000010000000000000015 /* SettingsView.swift */,
 				A10000010000000000000016 /* Theme.swift */,
 				A10000010000000000000017 /* Info.plist */,
+				A10000010000000000000018 /* Assets.xcassets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000010000000000000007 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +199,7 @@
 		A10000010000000000000062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TP65F453BM;
@@ -218,6 +223,7 @@
 		A10000010000000000000063 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TP65F453BM;
