@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("blueai_voice_enabled") private var voiceEnabled = false
-    @AppStorage("blueai_memory_enabled") private var memoryEnabled = true
-    @AppStorage("blueai_boot_message") private var bootMessage = "BlueAI online."
+    @AppStorage("blueai_voice_enabled") private var voiceEnabled: Bool = false
+    @AppStorage("blueai_memory_enabled") private var memoryEnabled: Bool = true
+    @AppStorage("blueai_boot_message") private var bootMessage: String = "BlueAI online."
 
     var body: some View {
         NavigationStack {
