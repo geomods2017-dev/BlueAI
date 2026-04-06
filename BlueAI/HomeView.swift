@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    private let columns = [
+    private let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 12),
         GridItem(.flexible(), spacing: 12)
     ]
