@@ -10,13 +10,6 @@ workflows:
         XCODE_PROJECT: "BlueAI.xcodeproj"
         XCODE_SCHEME: "BlueAI"
 
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: main
-          include: true
-
     scripts:
       - name: Show Xcode version
         script: |
@@ -34,7 +27,7 @@ workflows:
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro Max,OS=latest' \
             -configuration Debug \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
