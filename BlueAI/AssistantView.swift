@@ -7,12 +7,9 @@ struct BlueAIMessage: Identifiable {
 }
 
 struct AssistantView: View {
-    @State private var inputText = ""
+    @State private var inputText: String = ""
     @State private var messages: [BlueAIMessage] = [
-        BlueAIMessage(
-            text: "BlueAI online. Awaiting your command.",
-            isUser: false
-        )
+        BlueAIMessage(text: "BlueAI online. Awaiting your command.", isUser: false)
     ]
 
     var body: some View {
@@ -23,7 +20,7 @@ struct AssistantView: View {
                 ScrollView {
                     LazyVStack(spacing: 12) {
                         ForEach(messages) { message in
-                            messageBubble(message)
+                            messageBubble(for: message)
                         }
                     }
                     .padding(.horizontal, 16)
@@ -67,9 +64,11 @@ struct AssistantView: View {
         .padding(.bottom, 8)
     }
 
-    private func messageBubble(_ message: BlueAIMessage) -> some View {
+    private func messageBubble(for message: BlueAIMessage) -> some View {
         HStack {
-            if message.isUser { Spacer(minLength: 40) }
+            if message.isUser {
+                Spacer(minLength: 40)
+            }
 
             Text(message.text)
                 .font(.body)
@@ -79,11 +78,16 @@ struct AssistantView: View {
                 .background(message.isUser ? BlueAITheme.accent.opacity(0.28) : BlueAITheme.cardBackground)
                 .overlay(
                     RoundedRectangle(cornerRadius: 18)
-                        .stroke(message.isUser ? BlueAITheme.accent.opacity(0.45) : BlueAITheme.cardBorder, lineWidth: 1)
+                        .stroke(
+                            message.isUser ? BlueAITheme.accent.opacity(0.45) : BlueAITheme.cardBorder,
+                            lineWidth: 1
+                        )
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 18))
 
-            if !message.isUser { Spacer(minLength: 40) }
+            if !message.isUser {
+                Spacer(minLength: 40)
+            }
         }
     }
 
